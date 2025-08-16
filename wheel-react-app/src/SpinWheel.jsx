@@ -145,9 +145,11 @@ export default function SpinWheel({
     <div className="w-full flex flex-col items-center">
       <div className="relative" style={{width:size, height:size}}>
         {/* pointer */}
-        <div className="absolute top-1/2 -translate-y-1/2 -right-3 z-20">
-          <div className="w-0 h-0 border-t-[14px] border-b-[14px] border-l-[22px] border-t-transparent border-b-transparent border-l-amber-400 drop-shadow" />
-        </div>
+        <div className="absolute top-1/2 -translate-y-1/2 right-4 z-20">
+  <div className="w-0 h-0 border-t-[14px] border-b-[14px] border-r-[22px] border-t-transparent border-b-transparent border-r-amber-400 drop-shadow" />
+</div>
+
+
 
         <svg width={size} height={size} className="block drop-shadow" ref={wheelRef}
              style={{ transformOrigin: "50% 50%", transition: spinning ? `transform ${duration}ms cubic-bezier(0.22, 1, 0.36, 1)` : "none", transform: `rotate(${rotation}deg)` }}>
